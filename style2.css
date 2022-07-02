@@ -1,8 +1,12 @@
 body {
     background-color: rgb(231, 181, 204);
-}       
+}
 
-h1, h2, p, ul, a {
+h1,
+h2,
+p,
+ul,
+a {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -10,7 +14,7 @@ h1, h2, p, ul, a {
     color: inherit;
 }
 
-.menu {    
+.menu {
     width: 500px;
     border: 2px solid brown;
     border-radius: 20px;
@@ -30,7 +34,7 @@ p {
 /* ********** */
 /* Button */
 /* ********** */
-.btn {   
+.btn {
     position: relative;
     overflow: hidden;
     display: inline-flex;
@@ -47,25 +51,25 @@ p {
 }
 
 .btn:hover {
-    background-color:rgba(201, 23, 23, 0.582)
+    background-color: rgba(201, 23, 23, 0.582)
 }
 
-.btn::before {    
+.btn::before {
     content: '';
     display: inline-block;
     height: 15px;
     width: 15px;
     border-radius: 50%;
     margin-right: 5px;
-    background-color: brown;   
+    background-color: brown;
 
 
     transition: background-color 250ms linear;
     transition: transform 250ms linear;
 }
 
-.btn:hover::before { 
-    transform: translateY(30px); 
+.btn:hover::before {
+    transform: translateY(30px);
 }
 
 .btn::after {
@@ -84,7 +88,7 @@ p {
 
 
 .btn:hover::after {
-    transform: translateY(calc(-50%));  
+    transform: translateY(calc(-50%));
 }
 
 
@@ -99,15 +103,15 @@ p {
     margin-bottom: 10px;
 }
 
-.menu-item:not(:last-child){
+.menu-item:not(:last-child) {
     margin-right: 10px;
 }
 
 .link {
     position: relative;
-    display: block;   
+    display: block;
     padding: 10px;
-    border: 1px solid black;   
+    border: 1px solid black;
 
     background-color: aqua;
 }
@@ -117,7 +121,7 @@ p {
     content: '';
     display: block;
     height: 5px;
-    width: 100%;  
+    width: 100%;
     left: 0;
     bottom: 0;
     opacity: 0;
@@ -139,7 +143,7 @@ p {
     bottom: 0;
     background-color: rgb(179, 255, 0);
     transition: width 250ms linear;
-    
+
 }
 
 .link-second:hover::after {
@@ -162,4 +166,47 @@ p {
 
 .link-third:hover::after {
     transform: scaleX(1)
+}
+
+/* ******** */
+/* OVERLAY */
+/* ******** */
+
+.menu {
+    overflow: hidden;
+}
+
+.nav-wrp {    
+    position: relative;
+    width: 100%;   
+    background-color: blueviolet;
+    transform: translateX(110%);
+    transition: transform 250ms linear;
+}
+
+.nav-desc {
+    padding: 10px;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-item:first-child {
+    margin-right: 5px;
+}
+
+.nav-link {
+    display: block;
+    padding: 5px;
+    background-color: aqua;
+}
+
+.nav-link:hover {
+    color: brown;
+}
+
+
+.menu:hover .nav-wrp{   
+    transform: translateX(0);
 }
